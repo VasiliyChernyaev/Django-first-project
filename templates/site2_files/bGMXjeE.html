@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&view=fullpage -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Diploma site</title>
+
+    <link rel="canonical" href="https://codepen.io/Blandon93/pen/bGMXjeE">
+  
+  
+  
+  
+<style>
+@font-face {
+    font-family: "Open sans";
+ src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+}
+  
+  @font-face {
+      font-family: "Open sans";
+ src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  font-weight: bold;
+  }
+
+body {
+	margin: 0;
+	font-family: "Open sans", sans-serif;
+	color: #222222;
+	background-color: #ffffff;
+  width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  width: 1200px;
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header {
+  margin-left: auto;
+  margin-right: auto;
+ 
+  background-image:
+    url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  
+}
+
+.header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  
+  z-index: -1;
+}
+
+.header-logo {
+  width: 245px;
+  margin-top: 36px;
+  padding-left: 1px;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 75px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  padding: 0 20% 0 20%;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.menu-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.menu-list {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  font-size: 13px;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-list-item:hover {
+  text-decoration: underline;
+}
+
+.menu-list-item:nth-child(n + 2) {
+  padding-left: 30px;
+}
+
+p {
+	line-height: 22px;
+	margin-top: 0;
+	margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.courses {
+  margin: 0 auto;
+  display: inline-block;
+  width: 778px;
+  float: left;
+}
+
+.course {
+  border-top: 1px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 60px;
+  margin-left: -75px;
+}
+
+.article-date {
+  padding: 30px 0;
+  display: inline-block;
+  font-size: 12px;
+  color: #7e7e7e;
+  margin-right: 13px;
+}
+
+.author {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.course-img {
+  width: 380px;
+  margin-top: 5px;
+}
+
+.course-name {
+	margin: 0 auto;
+	font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000000 !important;
+}
+
+.course-link {
+  color: #000000;
+	text-decoration: none;
+}
+
+.course-link:hover {
+  color: #c4b27c;
+}
+
+.course-tag {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b59f5b;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 1px;
+  padding: 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.course-tag:nth-child(n+1) {
+  margin-right: 20px;
+}
+
+.course-tag:hover {
+  text-decoration: underline;
+}
+
+.course-tag-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.course-tag-link {
+  color: #c4b27c;
+  text-decoration: none;
+}
+
+.course-info {
+  box-sizing: border-box;
+  border: 1px;
+  width: 397px;
+  padding-left: 30px;
+}
+
+.course-description {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+aside {
+  width: 272px;
+  display: inline-block;
+  float: right;
+}
+
+.new-posts {
+  margin-top: 60px;
+}
+
+.last-post-date {
+	display: block;
+  margin: 0;
+  font-size: 12px;
+  color: #7e7e7e;
+}
+
+.last-post-title {
+  margin: 0;
+	font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.last-post-link {
+	color: #000000;
+	text-decoration: none;
+}
+
+.last-post-link:hover {
+  color: #b59f5b;
+}
+
+.last-post-preview {
+  float: left;
+  
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  margin-left: 1px;
+}
+
+.last-post {
+  display: inline-block;
+  margin-top: 22px;
+  padding-right: 15px;
+  width: 100%;
+  height: 70px;
+  font-size: 15px;
+  
+}
+
+.new-post-title {
+  margin: auto;
+  font-size: 14px;
+  font-style: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.new-post-title::after {
+  content:"";
+  display: flex;
+  width: auto;
+  height: 15px;
+  margin: 0 38% 5px;
+  border-bottom: 3px solid #e1d9bd; 
+}
+
+.search {
+  margin-top: 60px;
+}
+.search-button {
+  box-sizing: border-box;
+  min-height: 48px;
+  width: 48px;
+  border: none;
+  
+  color: #ffffff;
+  background-color: #b59f5b;
+  
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-button:hover {
+   background-color: #000000;
+}
+
+.search-field {
+  box-sizing: border-box;
+  width: 224px;
+  margin: 0 auto;
+  border: none;
+  padding-left: 20px;
+  
+  display: inline-block;
+  vertical-align: middle;
+  
+  font-size: 14px;
+  height: 48px;
+  background-color: #f4f7f6;
+}
+
+.search-field:focus {
+  outline: 1px solid #c4b27c;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.subscribe {
+  margin-top: 60px;
+}
+
+.subscribe-title {
+  font-size: 14px;
+  text-align: center;
+  font-style: bold;
+  text-transform: uppercase;
+}
+
+.subscribe-title::after {
+  content:"";
+   display: flex;
+  width: auto;
+  height: 15px;
+  margin: 0 38% 22px;
+  border-bottom: 3px solid #e1d9bd; 
+}
+
+.subscribe-field {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 20px;
+  border: none;
+  
+  display: block;
+  vertical-align: middle;
+  
+  font-size: 14px;
+  height: 48px;
+  background-color: #f4f7f6;
+}
+
+.subscribe-field:focus {
+  outline: 1px solid #c4b27c;
+}
+
+.subscribe-button {
+  box-sizing: border-box;
+  height: 48px;
+  width: 100%;
+  margin: 0;
+  padding-right: 15px;
+  border: 1px;
+  text-transform: uppercase;
+  
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #b59f5b;
+}
+
+.subscribe-button:hover {
+   background-color: #000000;
+}
+
+.tags {
+  margin-top: 60px;
+}
+
+.tags-title {
+  font-size: 14px;
+  text-align: center;
+  font-style: bold;
+  text-transform: uppercase;
+}
+
+.tags-title::after {
+ content:"";
+  display: flex;
+  width: auto;
+  height: 15px;
+  margin: 0 38% 20px;
+  border-bottom: 3px solid #e1d9bd; 
+}
+
+.tag {
+  text-decoration: none;
+  color: #000000
+}
+
+.tag-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.tag-list-item { 
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 5px 10px;
+  margin: 3px 3px;
+  border: 3px solid #eeeeee;
+}
+
+.tag-list-item:hover {
+border: 3px solid #b59f5b;
+}
+
+.categories {
+  margin-top: 57px;
+}
+
+.category-title {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.category-title::after {
+  content:"";
+   display: flex;
+  width: auto;
+  height: 15px;
+  margin: 0 38%;
+  border-bottom: 3px solid #e1d9bd; 
+}
+
+.category-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-list-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.category-list-link:hover {
+  color: #b59f5b;
+}
+
+.category-list-item {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding: 16px 1px;
+    
+  font-size: 14px;
+  font-weight: bold;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.category-count {
+  padding: 4px;
+  color: #b59f5b;
+}
+
+
+footer {
+  margin-top: 60px;
+}
+
+.contacts {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contacts-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7f6;
+}
+
+.dribble {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 0 15px;
+  background-image: 
+    url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+    background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.pinterest {
+  display: block;
+ width: 25px;
+  height: 25px;
+  padding: 0 15px;
+  background-image: 
+    url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+    background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.tumblr {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 0 15px;
+  background-image: 
+    url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} 
+
+.copyright {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1170px;
+  height: 12px;
+  margin: 30px 0 40px 0;
+  float: center;
+  
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.copyright-link {
+  text-decoration: none;
+  color: #999999;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <header class="header">
+  <div class="container">
+    <img src="./noemi-logo.svg" class="header-logo" alt="NOEMI">
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu-list-item">
+          <a class="menu-link" href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#home">Главная</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#0">Посты</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#0">Статьи</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#0">Теги</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#0">Темы</a>
+        </li>
+        <li class="menu-list-item">
+          <a class="menu-link" href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#0">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+     <h1 class="header-title" #style="color: #ffffff">Блог о творчестве, спорте и образе жизни</h1>
+  </div>
+</header>
+<div class="container">
+<main class="courses">
+  <article class="course">
+      <img class="course-img" src="./last-post1.jpg" alt="Утренний пляж">
+    <div class="course-info">
+      <ul class="course-tag-list">
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Travel</a></li>
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Health</a></li>
+      </ul>
+      <h2 class="course-name"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-link">10 мест, ради которых стоит проснуться на рассвете</a>
+      </h2>
+      <time class="article-date" datetime="2019-06-10">10 июня 2019</time><span class="author">неизвестный автор</span>
+      <div class="course-description">
+        <p>
+          Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?
+        </p>
+      </div>
+    </div>
+  </article>
+  <article class="course">
+    <img class="course-img" src="./last-post2.jpg" alt="Йога на пляже">
+    <div class="course-info">
+      <ul class="course-tag-list">
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Health</a></li>
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Lifestyle</a></li>
+      </ul>
+      <h2 class="course-name"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-link">Йога для начинающих в домашних условиях</a></h2>
+      <time class="article-date" datetime="2019-06-10">10 июня 2019</time><span class="author">неизвестный автор</span>
+      <div class="course-description">
+        <p>
+         Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.
+        </p>
+      </div>
+    </div>
+  </article>
+  <article class="course">
+    <img class="course-img" src="./last-post3.jpg" alt="Концерт на улице">
+    <div class="course-info">
+       <ul class="course-tag-list">
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Music</a></li>
+      </ul>
+      <h2 class="course-name"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-link">Лучшие музыкальные фестивали этого лета</a></h2>
+      <time class="article-date" datetime="2019-06-10">10 июня 2019</time><span class="author">неизвестный автор</span>
+      <div class="course-description">
+        <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобъете свою палатку?</p>
+        <p>Мы составили список лучших летних фестивалей по всему миру.</p>
+      </div>
+    </div>
+  </article>
+  <article class="course">
+    <img class="course-img" src="./last-post4.jpg" alt="Еда">
+    <div class="course-info">
+       <ul class="course-tag-list">
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Lifestyle</a></li>
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Food</a></li>
+       </ul>
+       <h2 class="course-name"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-link">Наукоёмкий подход к кулинарии</a></h2>
+       <time class="article-date" datetime="2019-06-10">10 июня 2019</time><span class="author">неизвестный автор</span>
+       <div class="course-description">
+        <p>
+          Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
+        </p>
+      </div>
+    </div>
+  </article>
+  <article class="course">
+    <img class="course-img" src="./last-post5.jpg" alt="Подушка">
+    <div class="course-info">
+       <ul class="course-tag-list">
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Lifestyle</a></li>
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">interior</a></li>
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">art</a></li>
+      </ul>
+      <h2 class="course-name"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-link">Делаем модные принты на подушках для интерьера</a></h2>
+      <time class="article-date" datetime="2019-06-10">10 июня 2019</time>
+      <div class="course-description">
+        <p>
+          Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку
+        </p>
+      </div>
+    </div>
+  </article>
+  <article class="course">
+    <img class="course-img" src="./last-post6.jpg" alt="Горный спорт">
+    <div class="course-info">
+      <ul class="course-tag-list">
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Travel</a></li>
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">lifestyle</a></li>
+      </ul>
+      <h2 class="course-name"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-link">Как первый раз отправиться в горы?</a></h2>
+      <time class="article-date" datetime="2019-06-10">10 июня 2019</time><span class="author">неизвестный автор</span>
+      <div class="course-description">
+        <p>
+          Для начала нужно определиться, в каком формате пройдёт ваше путешествие. Это зависит от многих факторов, не только ваших желаний и интересов.
+        </p>
+      </div>
+    </div>
+  </article>
+  <article class="course">
+    <img class="course-img" src="./last-post4.jpg" alt="Еда">
+    <div class="course-info">
+      <ul class="course-tag-list">
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">Lifestyle</a></li>
+        <li class="course-tag"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-tag-link">food</a></li>
+      </ul>
+      <h2 class="course-name"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="course-link">Наукоёмкий подход к кулинарии</a></h2>
+      <time class="article-date" datetime="2019-06-10">10 июня 2019</time><span class="author">неизвестный автор</span>
+      <div class="course-description">
+        <p>
+          Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
+        </p>
+      </div>
+    </div>
+  </article>
+</main>
+<aside>
+  <section class="new-posts">
+    <h2 class="new-post-title">Новые посты</h2>
+    <article class="last-post">
+    <img class="last-post-preview" src="./2.jpg" alt="Утренний пляж">			
+    <div class="last-post-header">
+    <time class="last-post-date" datetime="2022-06-14">14 июня 2019</time>
+			<h2 class="last-post-title">
+			<a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="last-post-link">10 мест, ради которых стоит проснуться</a>
+			</h2>		
+    </div>
+   </article>
+    <article class="last-post">
+    <img class="last-post-preview" src="./151.jpg" alt="Йога на пляже">	
+		<div class="last-post-header">
+      <time class="last-post-date" datetime="2022-06-14">14 июня 2019</time>
+			<h2 class="last-post-title">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="last-post-link">Йогда для домашних</a>
+			</h2>
+		</div>		
+   </article>
+    <article class="last-post">
+    <img class="last-post-preview" src="./45.jpg" alt="Кресло и пианино">		
+		<div class="last-post-header">
+      <time class="last-post-date" datetime="2022-06-14">14 июня 2019</time>
+			<h2 class="last-post-title">
+				<a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="last-post-link">Как мы превратили классное место в балкон</a>
+			</h2>
+		</div>		
+    </article>
+    <article class="last-post">
+      <img class="last-post-preview" src="./501.jpg" alt="Еда">	
+      <div class="last-post-header">
+        <time class="last-post-date" datetime="2022-06-14">14 июня 2019</time>
+				<h2 class="last-post-title">
+          <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="last-post-link">Кулинарный подход к науке</a>
+				</h2>
+			</div>		
+    </article>
+    <article class="last-post">
+      <img class="last-post-preview" src="./7.jpg" alt="Девушки с длинными волосами">	
+			<div class="last-post-header">
+        <time class="last-post-date" datetime="2022-06-14">14 июня 2019</time>
+				<h2 class="last-post-title">
+          <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="last-post-link">Лучшие прически для распущенных волос</a>
+				</h2>
+			</div>		
+    </article>
+  </section>
+  <section class="search">
+    <form class="search-form">
+      <input class="search-field" name="query" placeholder="Найти..." id="search-field" required="">
+      <label for="search-field"><span class="visually-hidden">Поле поиска</span></label>
+    <button class="search-button" id="search-button"><span class="visually-hidden">Кнопка поиска</span></button>
+      <label for="search-button"></label>
+    </form>
+  </section>
+  <section class="subscribe">
+    <h2 class="subscribe-title">Рассылка</h2>
+    <form class="subscribe-form">
+    <label for="subscribe-field">
+      <span class="visually-hidden">Кликни меня!</span>
+      <input class="subscribe-field" type="email" placeholder="Ваш email-адрес" required="">
+    </label>
+    <button class="subscribe-button">Подписаться</button>
+    </form>
+  </section>
+  <section class="tags">
+    <h2 class="tags-title">Теги</h2>
+    <ul class="tag-list">
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">fashion</a>
+      </li>
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">music</a>
+      </li>
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">lifestyle</a>
+      </li>
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">art</a>
+      </li>
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">interior</a>
+      </li>
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">travel</a>
+      </li>
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">food</a>
+      </li>
+      <li class="tag-list-item">
+        <a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tag">health</a>
+      </li>
+    </ul>
+  </section>
+  <section class="categories">
+    <h3 class="category-title">Темы</h3>
+    <ul class="category-list">
+      <li class="category-list-item" style="border: none"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="category-list-link">Красота</a><sup class="category-count">12</sup></li>
+      <li class="category-list-item"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="category-list-link">Здоровье</a><sup class="category-count">4</sup></li>
+      <li class="category-list-item"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="category-list-link">Образ жизни</a><sup class="category-count">145</sup></li>
+      <li class="category-list-item"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="category-list-link">Музыка</a><sup class="category-count">28</sup></li>
+      <li class="category-list-item"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="category-list-link">Спорт</a><sup class="category-count">62</sup></li>
+      <li class="category-list-item"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="category-list-link">Йога</a><sup class="category-count">8</sup></li>
+    </ul>
+  </section>
+</aside>
+<footer>
+  <div class="contacts">
+    <ul class="contacts-list">
+      <li><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="dribble"><span class="visually-hidden">Dribble</span></a></li>
+      <li><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="pinterest"><span class="visually-hidden">Pinterest</span></a></li> 
+      <li><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="tumblr"><span class="visually-hidden">Tubmlr</span></a></li>
+    </ul>
+  </div>
+  <div class="copyright">
+     <span class="copyright"><a href="https://cdpn.io/Blandon93/fullpage/bGMXjeE?nocache=true&amp;view=fullpage#" class="copyright-link">Copyright © 2009–2019 City Blog LLC.</a></span>
+  </div>
+</footer>
+</div>
+  
+  
+  
+
+
+
+</body></html>
