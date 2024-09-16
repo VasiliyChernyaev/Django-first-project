@@ -51,8 +51,8 @@ a:hover {
 
 .banner {
     display: block;
-    width: 100%;
-    max-width: 800px;
+    width: 500%;
+    max-width: 200px;
 }
 
 .form-with-validation {
